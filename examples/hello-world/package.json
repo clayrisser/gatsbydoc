@@ -1,6 +1,6 @@
 {
   "name": "hello-world",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hello world node script",
   "private": true,
   "keywords": [
@@ -52,7 +52,7 @@
     "eslint-config-jam": "^0.1.6",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "gatsby-sphinx": "^0.0.2",
+    "gatsby-sphinx": "^0.0.3",
     "rimraf": "^2.6.2"
   },
   "engines": {
