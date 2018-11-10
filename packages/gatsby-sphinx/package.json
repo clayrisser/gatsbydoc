@@ -61,5 +61,6 @@
   },
   "eslintIgnore": [
     "lib"
-  ]
+  ],
+  "gitHead": "de2e47213459ed00f8483ed600efff12b9f83efb"
 }

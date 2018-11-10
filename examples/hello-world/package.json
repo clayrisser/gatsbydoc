@@ -2,6 +2,7 @@
   "name": "hello-world",
   "version": "0.0.2",
   "description": "Hello world node script",
+  "private": true,
   "keywords": [
     "hello-world",
     "hello",
@@ -59,5 +60,6 @@
   },
   "eslintIgnore": [
     "lib"
-  ]
+  ],
+  "gitHead": "de2e47213459ed00f8483ed600efff12b9f83efb"
 }
