@@ -1,0 +1,65 @@
+{
+  "name": "gatsby-sphinx",
+  "version": "0.0.1",
+  "description": "Generate sphinx docs for gatsby",
+  "keywords": [
+    "gatsby-sphinx",
+    "gatsby",
+    "sphinx",
+    "docs",
+    "python"
+  ],
+  "homepage": "https://github.com/codejamninja/gatsby-sphinx",
+  "bugs": {
+    "url": "https://github.com/codejamninja/gatsby-sphinx/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "Makefile",
+    "lib",
+    "requirements.txt"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/gatsby-sphinx"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "clean": "rimraf lib && make clean",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "format": "prettier --write ./src/**/*.js",
+    "prepublish": "npm run clean && npm run env && npm run build",
+    "start": "babel-node src",
+    "env": "make env"
+  },
+  "dependencies": {
+    "@babel/node": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-everything": "^0.1.2",
+    "eslint": "^5.5.0",
+    "eslint-config-jam": "^0.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "rimraf": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
