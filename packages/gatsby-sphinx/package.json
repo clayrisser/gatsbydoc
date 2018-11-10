@@ -1,6 +1,6 @@
 {
   "name": "gatsby-sphinx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate sphinx docs for gatsby",
   "keywords": [
     "gatsby-sphinx",
