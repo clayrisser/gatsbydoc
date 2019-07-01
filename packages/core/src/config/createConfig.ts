@@ -1,5 +1,8 @@
+import cosmiconfig from 'cosmiconfig';
 import mergeConfiguration from 'merge-configuration';
+import pkgDir from 'pkg-dir';
 import { environment } from 'js-info';
+import { oc } from 'ts-optchain.macro';
 import defaultConfig from './defaultConfig';
 import { Config, Option, Options } from '../types';
 
@@ -8,13 +11,23 @@ export default function createConfig(
   options: Options = {},
   customConfig: Partial<Config> = {}
 ): Config {
+  const rootPath = pkgDir.sync(process.cwd()) || process.cwd();
   options = sanitizeOptions(options);
-  let config = mergeConfiguration(defaultConfig, customConfig);
+  const userConfig: Partial<Config> = oc(
+    cosmiconfig('gatsbydoc').searchSync(rootPath)
+  ).config({});
+  let config = mergeConfiguration(defaultConfig, userConfig);
+  config = mergeConfiguration(config, customConfig);
   config = {
     ...config,
     action,
+    docsPath: options.docsPath || config.docsPath,
     env: environment.value,
-    options
+    open: options.open || config.open,
+    outputPath: options.outputPath || config.outputPath,
+    port: Number(options.port || config.port),
+    readme: options.readme || config.readme,
+    serve: options.serve || config.serve
   };
   return config;
 }

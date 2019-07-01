@@ -14,7 +14,13 @@ try {
   commander.command('clean');
   commander.command('start');
   commander.option('--config [json]', 'config json');
+  commander.option('--docs-path [path]', 'docs path');
+  commander.option('--output-path [path]', 'output path');
+  commander.option('-p --port [port]', 'server port');
+  commander.option('--open', 'open browser');
+  commander.option('--readme', 'use readme');
   commander.option('-d --debug', 'debug logging');
+  commander.option('-s --serve', 'run server');
   commander.option('-v --verbose', 'verbose logging');
   commander.action(async (cmd: string, options: Options) => {
     isAction = true;

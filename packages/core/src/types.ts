@@ -14,11 +14,23 @@ export interface Dependancies {
 
 export interface Config {
   action: string;
+  docsPath: string;
   env: string;
-  options: Options;
+  open: boolean;
+  outputPath: string;
+  port: number;
+  readme: boolean;
+  serve: boolean;
 }
 
-export interface Options {}
+export interface Options {
+  docsPath?: string;
+  open?: boolean;
+  outputPath?: string;
+  port?: string;
+  readme?: boolean;
+  serve?: boolean;
+}
 
 export type Option = string | number;
 

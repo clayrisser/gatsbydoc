@@ -1,9 +1,9 @@
 {
-  "name": "@gatsbydoc/core",
-  "version": "0.0.2",
+  "name": "@gatsbydoc/cli",
+  "version": "0.0.1",
   "description": "sphinx documentation generator for node",
   "keywords": [
-    "@gatsbydoc/core",
+    "@gatsbydoc/cli",
     "sphinx"
   ],
   "homepage": "https://github.com/codejamninja/gatsbydoc/packages/core",
@@ -17,7 +17,11 @@
     "email": "jam@codejam.ninja",
     "url": "https://codejam.ninja"
   },
+  "bin": {
+    "gatsbydoc": "bin/bin.js"
+  },
   "files": [
+    "bin",
     "lib"
   ],
   "main": "lib/index.js",
@@ -37,13 +41,9 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
+    "commander": "^2.20.0",
     "core-js": "^3.1.4",
-    "cosmiconfig": "^5.2.1",
     "err": "^2.1.11",
-    "js-info": "^0.3.0",
-    "merge-configuration": "^0.4.1",
-    "ora": "^3.4.0",
-    "pkg-dir": "^4.2.0",
     "ts-optchain.macro": "^1.1.5"
   },
   "devDependencies": {

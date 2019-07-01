@@ -1,3 +1,10 @@
 import { Config } from '../types';
 
-export default {} as Config;
+export default {
+  docsPath: 'docs',
+  open: false,
+  outputPath: 'dist/docs',
+  port: 8080,
+  readme: false,
+  serve: false
+} as Config;
