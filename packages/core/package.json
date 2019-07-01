@@ -1,6 +1,6 @@
 {
   "name": "@gatsbydoc/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "sphinx documentation generator for node",
   "keywords": [
     "@gatsbydoc/core",
