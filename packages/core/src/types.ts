@@ -58,3 +58,5 @@ export interface IEngine {
   install(): null;
   watch(): null;
 }
+
+export interface PresetConfig {}

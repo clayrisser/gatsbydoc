@@ -1,5 +1,6 @@
 {
   "name": "typescript",
+  "private": true,
   "version": "0.0.1",
   "description": "gatsbydoc typescript example",
   "keywords": [

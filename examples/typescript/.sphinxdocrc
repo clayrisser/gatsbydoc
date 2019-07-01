@@ -1,2 +1,4 @@
 docsPath: docs
 outputPath: dist/docs
+presets:
+  - typescript
