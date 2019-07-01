@@ -1,6 +1,6 @@
 {
   "name": "@gatsbydoc/typescript",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "gatsby typescript preset",
   "keywords": [
     "@gatsbydoc/typescript",
@@ -40,8 +40,8 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@gatsbydoc/core": "^0.0.7",
-    "@gatsbydoc/sphinx": "^0.0.7",
+    "@gatsbydoc/core": "^0.0.8",
+    "@gatsbydoc/sphinx": "^0.0.8",
     "core-js": "^3.1.4"
   },
   "devDependencies": {
