@@ -40,8 +40,6 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@gatsbydoc/core": "^0.0.8",
-    "@gatsbydoc/sphinx": "^0.0.8",
     "core-js": "^3.1.4"
   },
   "devDependencies": {
@@ -70,5 +68,6 @@
     "testRegex": "tests(/|/.*/)[^_/]*[jt]sx?$",
     "verbose": true
   },
-  "gatsbydocPreset": true
+  "gatsbydocPreset": true,
+  "gitHead": "b1cecac6897072615b7579003ae1cc4663230542"
 }
