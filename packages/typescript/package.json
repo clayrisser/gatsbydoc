@@ -1,13 +1,14 @@
 {
-  "name": "@gatsbydoc/sphinx",
+  "name": "@gatsbydoc/typescript",
   "version": "0.0.6",
-  "description": "gatsbydoc sphinx",
+  "description": "gatsby typescript preset",
   "keywords": [
-    "@gatsbydoc/sphinx",
+    "@gatsbydoc/typescript",
     "gatsby",
-    "sphinx"
+    "sphinx",
+    "typescript"
   ],
-  "homepage": "https://github.com/codejamninja/gatsbydoc/packages/sphinx",
+  "homepage": "https://github.com/codejamninja/gatsbydoc/packages/typescript",
   "bugs": {
     "url": "https://github.com/codejamninja/gatsbydoc/issues",
     "email": "jam@codejam.ninja"
@@ -19,7 +20,8 @@
     "url": "https://codejam.ninja"
   },
   "files": [
-    "lib"
+    "lib",
+    "preset"
   ],
   "main": "lib/index.js",
   "repository": {
@@ -38,6 +40,8 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
+    "@gatsbydoc/core": "^0.0.6",
+    "@gatsbydoc/typescript": "^0.0.6",
     "core-js": "^3.1.4",
     "cosmiconfig": "^5.2.1",
     "err": "^2.1.11",
