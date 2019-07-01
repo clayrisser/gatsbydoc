@@ -38,6 +38,7 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
+    "@gatsbydoc/core": "^0.0.9",
     "core-js": "^3.1.4",
     "cosmiconfig": "^5.2.1",
     "err": "^2.1.11",
@@ -73,5 +74,6 @@
     "testRegex": "tests(/|/.*/)[^_/]*[jt]sx?$",
     "verbose": true
   },
+  "gatsbydocEngine": "lib/index.js",
   "gitHead": "b1cecac6897072615b7579003ae1cc4663230542"
 }

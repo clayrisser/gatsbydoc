@@ -26,11 +26,15 @@ try {
   commander.option('-s --serve', 'run server');
   commander.option('-v --verbose', 'verbose logging');
   commander.action(async (cmd: string, options: Options) => {
-    isAction = true;
-    const config = createConfig(cmd, options);
-    return action(config, dependancies).catch((err: Error) => {
+    try {
+      isAction = true;
+      const config = createConfig(cmd, options);
+      return action(config, dependancies).catch((err: Error) => {
+        return handleError(err, dependancies);
+      });
+    } catch (err) {
       return handleError(err, dependancies);
-    });
+    }
   });
   commander.parse(process.argv);
 } catch (err) {

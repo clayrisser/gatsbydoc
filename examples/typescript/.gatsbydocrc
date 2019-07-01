@@ -1,4 +1,4 @@
 docsPath: docs
 outputPath: dist/docs
 presets:
-  - typescript
+  - '@gatsbydoc/typescript'

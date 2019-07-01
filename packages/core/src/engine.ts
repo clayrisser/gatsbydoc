@@ -3,6 +3,8 @@ import path from 'path';
 import pkgDir from 'pkg-dir';
 import { Paths, Config } from './types';
 
+const projectPath = pkgDir.sync(process.cwd()) || process.cwd();
+
 export default class Engine {
   _paths: Paths;
 
@@ -60,7 +62,6 @@ export default class Engine {
 
   get paths(): Paths {
     if (this._paths) return this._paths;
-    const projectPath = pkgDir.sync(process.cwd()) || process.cwd();
     const outputPath = path.resolve(projectPath, this.config.outputPath);
     const workingPath = path.resolve(projectPath, '.tmp/gatsbydoc');
     this._paths = {
@@ -72,4 +73,26 @@ export default class Engine {
     };
     return this._paths;
   }
+}
+
+export function getEngines(): string[] {
+  const engineNames: string[] = Object.keys(
+    require(path.resolve(projectPath, 'package.json')).dependencies
+  );
+  return engineNames.filter(engineName => {
+    return !!require(path.resolve(
+      projectPath,
+      'node_modules',
+      engineName,
+      'package.json'
+    )).gatsbydocEngine;
+  });
+}
+
+export function loadEngine(engineName: string): Engine {
+  const rootPath = path.resolve(projectPath, 'node_modules', engineName);
+  const enginePkg = require(path.resolve(rootPath, 'package.json'));
+  let engine = require(path.resolve(projectPath, enginePkg.gatsbydocEngine));
+  if (engine.__esModule) engine = engine.default;
+  return engine as Engine;
 }

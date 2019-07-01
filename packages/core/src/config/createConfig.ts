@@ -1,10 +1,12 @@
+import Err from 'err';
 import cosmiconfig from 'cosmiconfig';
 import mergeConfiguration from 'merge-configuration';
 import pkgDir from 'pkg-dir';
 import { environment } from 'js-info';
 import { oc } from 'ts-optchain.macro';
 import defaultConfig from './defaultConfig';
-import { Config, Option, Options } from '../types';
+import { Config, Option, Options, Preset } from '../types';
+import { loadPreset } from '../preset';
 
 export default function createConfig(
   action: string,
@@ -18,6 +20,21 @@ export default function createConfig(
   ).config({});
   let config = mergeConfiguration(defaultConfig, userConfig);
   config = mergeConfiguration(config, customConfig);
+  if (!config.presets.length) throw new Err('missing presets', 400);
+  config.presets = config.presets.reduce(
+    (presets: Preset[], preset: Preset) => {
+      if (typeof preset === 'string') {
+        preset = {
+          resolve: preset,
+          options: {}
+        };
+      }
+      preset.config = loadPreset(preset.resolve);
+      presets.push(preset);
+      return presets;
+    },
+    []
+  );
   config = {
     ...config,
     action,

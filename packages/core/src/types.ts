@@ -17,6 +17,7 @@ export interface Config {
   open: boolean;
   outputPath: string;
   port: number;
+  presets: Preset[];
   readme: boolean;
   serve: boolean;
 }
@@ -46,10 +47,13 @@ export interface Spinner {
   warn(text?: string): Spinner;
 }
 
-export interface Preset {
-  name: string;
-  engine: string;
-}
+export type Preset =
+  | string
+  | {
+      config?: PresetConfig;
+      options: Partial<PresetConfig>;
+      resolve: string;
+    };
 
 export interface IEngine {
   name: string;
@@ -59,4 +63,7 @@ export interface IEngine {
   watch(): null;
 }
 
-export interface PresetConfig {}
+export interface PresetConfig {
+  name: string;
+  engine: string;
+}

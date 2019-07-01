@@ -5,6 +5,7 @@ export default {
   open: false,
   outputPath: 'dist/docs',
   port: 8080,
+  presets: [],
   readme: false,
   serve: false
-} as Config;
+} as Partial<Config>;
