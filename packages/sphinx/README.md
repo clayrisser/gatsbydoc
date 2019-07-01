@@ -1,8 +1,8 @@
-# @gatsbydoc/cli
+# @gatsbydoc/sphinx
 
-[![GitHub stars](https://img.shields.io/github/stars/codejamninja/gatsbydoc.svg?style=social&label=Stars)](https://github.com/codejamninja/gatsbydoc/packages/cli)
+[![GitHub stars](https://img.shields.io/github/stars/codejamninja/gatsbydoc.svg?style=social&label=Stars)](https://github.com/codejamninja/gatsbydoc/packages/sphinx)
 
-> gatsbydoc cli
+> gatsbydoc sphinx
 
 Please ★ this repo if you found it useful ★ ★ ★
 
@@ -13,7 +13,7 @@ Please ★ this repo if you found it useful ★ ★ ★
 ## Installation
 
 ```sh
-npm install -g @gatsbydoc/cli
+npm install -g @gatsbydoc/sphinx
 ```
 
 ## Dependencies
@@ -38,7 +38,7 @@ Review the [guidelines for contributing](https://github.com/codejamninja/gatsbyd
 
 ## License
 
-[MIT License](https://github.com/codejamninja/gatsbydoc/blob/master/packages/cli/LICENSE)
+[MIT License](https://github.com/codejamninja/gatsbydoc/blob/master/packages/sphinx/LICENSE)
 
 [Jam Risser](https://codejam.ninja) © 2019
 

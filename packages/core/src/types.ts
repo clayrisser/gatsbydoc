@@ -1,5 +1,3 @@
-import { Ora } from 'ora';
-
 export interface Platform {
   config: (config?: Config) => Partial<Config>;
 }
@@ -38,14 +36,22 @@ export interface Paths {
   [key: string]: string;
 }
 
-export interface Spinner extends Ora {}
+export interface Spinner {
+  clear(): Spinner;
+  fail(text?: string): Spinner;
+  info(text?: string): Spinner;
+  start(text?: string): Spinner;
+  stop(): Spinner;
+  succeed(text?: string): Spinner;
+  warn(text?: string): Spinner;
+}
 
 export interface Preset {
   name: string;
   engine: string;
 }
 
-export interface Engine {
+export interface IEngine {
   name: string;
   build(): null;
   clean(): null;

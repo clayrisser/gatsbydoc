@@ -1,10 +1,11 @@
 {
-  "name": "@gatsbydoc/cli",
-  "version": "0.0.1",
-  "description": "gatsbydoc cli",
+  "name": "@gatsbydoc/sphinx",
+  "version": "0.0.5",
+  "description": "gatsbydoc sphinx",
   "keywords": [
-    "@gatsbydoc/cli",
-    "gatsby"
+    "@gatsbydoc/sphinx",
+    "gatsby",
+    "sphinx"
   ],
   "homepage": "https://github.com/codejamninja/gatsbydoc/packages/sphinx",
   "bugs": {
@@ -17,11 +18,7 @@
     "email": "jam@codejam.ninja",
     "url": "https://codejam.ninja"
   },
-  "bin": {
-    "gatsbydoc": "bin/bin.js"
-  },
   "files": [
-    "bin",
     "lib"
   ],
   "main": "lib/index.js",
@@ -41,11 +38,11 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@gatsbydoc/core": "^0.0.5",
-    "commander": "^2.20.0",
     "core-js": "^3.1.4",
+    "cosmiconfig": "^5.2.1",
     "err": "^2.1.11",
-    "ora": "^3.4.0",
+    "fs-extra": "^8.1.0",
+    "python-env": "^0.2.8",
     "ts-optchain.macro": "^1.1.5"
   },
   "devDependencies": {
@@ -53,9 +50,8 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@types/cosmiconfig": "^5.0.3",
+    "@types/fs-extra": "^8.0.0",
     "@types/node": "^12.0.10",
-    "@types/pkg-dir": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "babel-preset-jam": "^0.4.1",
