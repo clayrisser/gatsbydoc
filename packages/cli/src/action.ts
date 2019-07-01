@@ -1,6 +1,5 @@
 import Err from 'err';
-import handleError from './handleError';
-import { Config, Dependancies } from './types';
+import { handleError, Config, Dependancies } from '@gatsbydoc/core';
 import { build, clean, start } from './actions';
 
 export default async function action(

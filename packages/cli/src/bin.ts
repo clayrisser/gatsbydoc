@@ -1,10 +1,13 @@
 import Err from 'err';
 import commander from 'commander';
 import ora from 'ora';
+import {
+  Dependancies,
+  Options,
+  createConfig,
+  handleError
+} from '@gatsbydoc/core';
 import action from './action';
-import handleError from './handleError';
-import { Dependancies, Options } from './types';
-import { createConfig } from './config';
 
 let isAction = false;
 const dependancies: Dependancies = { spinner: ora() };

@@ -41,10 +41,11 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@gatsbydoc/core": "^0.0.4",
+    "@gatsbydoc/core": "^0.0.5",
     "commander": "^2.20.0",
     "core-js": "^3.1.4",
     "err": "^2.1.11",
+    "ora": "^3.4.0",
     "ts-optchain.macro": "^1.1.5"
   },
   "devDependencies": {
