@@ -1,6 +1,6 @@
 {
   "name": "@gatsbydoc/cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "gatsbydoc cli",
   "keywords": [
     "@gatsbydoc/cli",
@@ -41,7 +41,7 @@
     "test": "npm run lint && jest"
   },
   "dependencies": {
-    "@gatsbydoc/core": "^0.0.6",
+    "@gatsbydoc/core": "^0.0.7",
     "commander": "^2.20.0",
     "core-js": "^3.1.4",
     "err": "^2.1.11",
